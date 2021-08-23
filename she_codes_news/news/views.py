@@ -4,7 +4,7 @@ from .models import NewsStory
 from .forms import StoryForm
 
 
-class IndexView(generic.ListView):
+class IndexView(generic.ListView):  
     template_name = 'news/index.html'
 
     def get_queryset(self):
@@ -23,9 +23,24 @@ class StoryView(generic.DetailView):
     context_object_name = 'story'
 
 class AddStoryView(generic.CreateView):
-    form_class = StoryForm #from forms.py
+    form_class = StoryForm #from \news\forms.py
     context_object_name = 'storyForm' #just a name for the object
     template_name = 'news/createStory.html'
     success_url = reverse_lazy('news:index') #the path we can post things to when they are succesful
 
-#reverse_lazy: reverse_lazy is used for resolving Django URL names into URL paths. The resolution is not seen by the end user client as all of this work occurs within the Django application code and framework code.
+    #overiding form_valid on generic.CreateView
+    def form_valid(self, form):
+        #set author to logged in user
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
+class AccountView():
+    
+
+
+
+#reverse_lazy: reverse_lazy is used for resolving Django URL names into URL paths. 
+# The resolution is not seen by the end user client as 
+# all of this work occurs within the Django application code and framework code.
+
+
