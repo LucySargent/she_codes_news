@@ -11,9 +11,9 @@ header {
     border-bottom: 1px solid #000;
 }
 
-img {
+/* img {
     filter: grayscale(100%);
-}
+} */
 
 h1 {
     font-family: 'Montserrat Subrayada', sans-serif;
@@ -52,3 +52,12 @@ a {
 a, p {
     font-family: monospace;
 }
+
+#add_story_button {
+    font: 16px Arial;
+    background-color: #fdcc43;
+    color: white;
+    padding: 6px 10px 6px 10px;
+    border-radius: 5px;
+    
+  }

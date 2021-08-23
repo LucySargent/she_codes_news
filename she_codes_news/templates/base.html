@@ -1,7 +1,8 @@
 {% load static %}
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
         <title>She Codes News</title>
@@ -13,16 +14,21 @@
     </head>
 
     <body>
+
         <header>
+
             <div id="header-text">
                 <a id="header-link" href="{% url 'news:index' %}">
                     <h1>She {Codes} News</h1>
                 </a>
             </div>
+
             <!-- include nav here -->
             {% include './nav.html' %}
         </header>
+
         <!-- content blocks here -->
         {% block content %}{% endblock %}
     </body>
+
 </html>

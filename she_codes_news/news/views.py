@@ -34,13 +34,7 @@ class AddStoryView(generic.CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
 
-class AccountView():
     
-
-
-
 #reverse_lazy: reverse_lazy is used for resolving Django URL names into URL paths. 
 # The resolution is not seen by the end user client as 
 # all of this work occurs within the Django application code and framework code.
-
-

@@ -4,10 +4,21 @@
     {% block stylesheets %}
         <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
     {% endblock %}
+    
 
     {% block content %}
-    <a href="{% url 'news:newStory' %}">Write a new story</a>
+{% comment %} can I use if statement to show/hide write new story link? {% endcomment %}
+    <div>
+        {% if user.is_authenticated %}
+            <p>Welcome back, {{ user.username }}! →<a href="{% url 'news:newStory' %}" id="add_story_button">Write a new story</a></p>
+        {% else %}
+            <a href="{% url 'login' %}" id="add_story_button">Login</a></p>
+        {% endif %}
+    </div> 
+
+
     <h2>Latest News</h2>
+
 
     <div id="latest-stories">
         {% if latest_stories %}
