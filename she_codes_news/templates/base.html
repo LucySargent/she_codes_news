@@ -14,18 +14,17 @@
     </head>
 
     <body>
-
+{% comment %} 
         <header>
-
             <div id="header-text">
                 <a id="header-link" href="{% url 'news:index' %}">
                     <h1>She {Codes} News</h1>
                 </a>
-            </div>
+            </div> {% endcomment %}
 
-            <!-- include nav here -->
+            {% comment %} <!-- include nav here -->
             {% include './nav.html' %}
-        </header>
+        </header> {% endcomment %}
 
         <!-- content blocks here -->
         {% block content %}{% endblock %}

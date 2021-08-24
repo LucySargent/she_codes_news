@@ -12,9 +12,15 @@ class IndexView(generic.ListView):
         return NewsStory.objects.order_by('pub_date')
 
     def get_context_data(self, **kwargs):
+        print(self.request.GET.get('search'))
+        search_var = self.request.GET.get('search',"")
         context = super().get_context_data(**kwargs)
-        context['latest_stories'] = NewsStory.objects.order_by('-pub_date')[:4]
-        context['all_stories'] = NewsStory.objects.order_by('-pub_date')
+        # context['latest_stories'] = NewsStory.objects.order_by('-pub_date')[:3]
+        # context['all_stories'] = NewsStory.objects.order_by('-pub_date')[3:100]
+        # context['latest_stories'] = NewsStory.objects.order_by('-pub_date').filter(title__contains=search_var)[:3]
+        # context['all_stories'] = NewsStory.objects.order_by('-pub_date').filter(title__contains=search_var)[3:]
+        context['latest_stories'] = NewsStory.objects.order_by('-pub_date').filter(author__username__contains=search_var)[:3]
+        context['all_stories'] = NewsStory.objects.order_by('-pub_date').filter(author__username__contains=search_var)[3:]
         return context
 
 class StoryView(generic.DetailView):
@@ -33,8 +39,3 @@ class AddStoryView(generic.CreateView):
         #set author to logged in user
         form.instance.author = self.request.user
         return super().form_valid(form)
-
-    
-#reverse_lazy: reverse_lazy is used for resolving Django URL names into URL paths. 
-# The resolution is not seen by the end user client as 
-# all of this work occurs within the Django application code and framework code.

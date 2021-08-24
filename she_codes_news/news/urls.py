@@ -11,4 +11,5 @@ urlpatterns = [
     #name = 'index' is a name for the url
     path('<int:pk>/', views.StoryView.as_view(), name='story'), # /news/+primary key id for an individual story
     path('add-story/', views.AddStoryView.as_view(),name='newStory') # /news/add-story (our new story) 
+    
 ]

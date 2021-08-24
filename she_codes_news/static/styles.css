@@ -1,25 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@500&display=swap');
 
 body {
-    background-color: rgb(240, 239, 239);
+    background-color: white
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background-color: #cccccc; */
+    height: 300px;
+    width: 100%;
+    margin-top: 5%;
+    /* margin-bottom: 0%; */
+    background: #cccccc url("https://picsum.photos/600");
+
+}
+
+.hero_child {
+    background-color: #728597;
+    text-align: center;
+}
+
+#headline {
+    width: 90%;
+    display: block;
+    text-align: left;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+#user_login {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #000;
 }
-
-/* img {
-    filter: grayscale(100%);
-} */
 
 h1 {
     font-family: 'Montserrat Subrayada', sans-serif;
     text-decoration: none;
     font-size: 4rem;
     margin: 0;
+    /* color: white; */
 }
 
 h2 {
@@ -38,26 +66,39 @@ h3 {
 
 nav {
     flex-basis: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
 }
 
 a {
-    margin: 2px;
+    margin: 20px;
     text-decoration: none;
-    color: #000;
+    color: rgb(252, 250, 250);
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 20px;
 }
 
-a, p {
+p {
     font-family: monospace;
+    color: black;
+    /* font: 16px; */
 }
 
 #add_story_button {
-    font: 16px Arial;
+    font: 20px;
+    font-family: monospace;
     background-color: #fdcc43;
     color: white;
     padding: 6px 10px 6px 10px;
-    border-radius: 5px;
-    
-  }
+    border-radius: 5px;  
+}
+
+#hero_background {
+    width: 90%;
+    height: 50%;
+    height: 200px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+}

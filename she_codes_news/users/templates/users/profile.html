@@ -1,3 +1,14 @@
-Hello World!
-<p>{{ user.username }}</p>
-<p>{{ user.email }}</P>
+{% extends 'base.html' %}
+{% block content %}
+<p>Hi {{ user.username }} !</p>
+<p>Email: {{ user.email }}</P>
+<p>Date joined: {{ user.date_joined }}</p>
+<p>Last login: {{ user.last_login }}</p>
+
+<p>Change your password: </p>
+
+<p>Here's a list of your stories:</p>
+    <div>
+{% comment %} How can the html display the UserProfile view? {% endcomment %}
+    </div>
+{% endblock content %}
