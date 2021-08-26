@@ -21,16 +21,13 @@ class UserProfile(generic.DetailView):
     model = CustomUser
     context_object_name = 'user'
 
-class UserStories(ListView):
-    template_name = 'users/my_stories.html'
+class StoryListView(ListView):
+    template_name = 'users/profile.html'
     model = NewsStory
-    context_object_name = 'mystory'
-        
-    def Users_Stories(request):
-        story = NewsStory.objects.all()
-        return render(request, {story})
     
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 
 
