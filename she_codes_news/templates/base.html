@@ -3,7 +3,7 @@
 
 <html lang="en">
 
-    <head>
+<head>
         <meta charset="utf-8">
         <title>She Codes News</title>
         <meta name="description" content="">
@@ -11,7 +11,36 @@
         <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
         {% block stylesheets %}{% endblock %}
-    </head>
+</head>
+    <header id="bg" style="background-image: url('{% static "/news/images/cupcake-3.jpg"%}');">
+        <div id='hero'>
+            <div id='hero_child_nav'>
+                <nav>
+                    <a href="{% url 'news:index' %}">Home</a>
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'users:userProfile' user.id %}">My Profile</a>
+                        <a href="{% url 'users:myStories' %}">My Stories</a>
+                        <a href={% url 'logout' %}>Logout</a>
+                    {% else %}
+                        <a href="{% url 'login' %}">Login</a>
+                        <a href="{% url 'users:createAccount' %}">Create Account</a>
+                    {% endif %}
+                </nav>
+            </div>
+            <div id="search">
+                <form class="add_your_class" method="GET" action="" >
+                <button class="search_button" type="submit"> Search by author... </button>
+                <input class="add_your_class" type="search" name="search"> 
+                </form>
+            </div>
+            <div id='hero_child_title'>
+                <a href="{% url 'news:index' %}"><h1>She {Codes} News</h1></a>
+            </div>
+            <div id='hero_child_subtitle'>
+                <p id="header-text_subtitle">Find out all the lastest news from the She Codes community!</p>
+            </div>
+        </div>
+    </header>
 
     <body>
 {% comment %} 

@@ -1,9 +1,18 @@
-<p>Here's a list of your stories:</p>
-<h1>My Stories</h1>
-<ul>
-{% for story in object_list %}
-    <li>{{ story.pub_date|date }} - {{ story.title }}</li>
-{% empty %}
-    <li>No stories yet.</li>
-{% endfor %}
-</ul>
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>My Stories</h2>
+
+<div>
+    <ul>
+    {% if user_stories %}
+        {% for story in object_list %}
+        <li>{{ story.pub_date|date }} - {{ story.title }} - {{ story.author }}</li>
+        {% endfor %}
+    {% else %}
+        <li>No stories yet.</li>
+    {% endif %}
+    </ul>
+</div>
+
+{% endblock %}

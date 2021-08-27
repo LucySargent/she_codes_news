@@ -1,13 +1,18 @@
+from django.contrib.auth.forms import UsernameField
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
 from django.views import generic
-from django.shortcuts import render
 from django.views.generic.detail import DetailView
+# from django.shortcuts import render
+from django.views.generic import ListView
+
 from .models import CustomUser
+from news.models import NewsStory
 from .forms import CustomUserCreationForm
 
-from django.views.generic import ListView
-from news.models import NewsStory
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
+
 
 
 # Create your views here.
@@ -21,12 +26,23 @@ class UserProfile(generic.DetailView):
     model = CustomUser
     context_object_name = 'user'
 
-class StoryListView(ListView):
-    template_name = 'users/profile.html'
+
+class StoryListView(ListView, LoginRequiredMixin, UserPassesTestMixin):
+    template_name = 'users/userstories.html'
     model = NewsStory
+    context_object_name = 'userstory'
     
+    # def get_queryset(self):
+    #     context = super().get_queryset(self)
+    #     context['user_stories'] = NewsStory.objects.all()
+    #     return context
+
     def get_context_data(self, **kwargs):
+        print(self.request.GET.get('search'))
         context = super().get_context_data(**kwargs)
+        obj = self.get_object()
+        obj.author == self.request.user
+        context['user_stories'] = NewsStory.objects.order_by('-pub_date').filter(obj.author)
         return context
 
 

@@ -1,19 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Hi {{ user.username }} !</h1>
-<h3>Email: {{ user.email }}</h3>
-<h3>Date joined: {{ user.date_joined }}</h3>
-<h3>Last login: {{ user.last_login }}</h3>
-
-<h3>Change your password: </h3>
-
-<h1>My Stories</h1>
-<ul>
-{% for story in object_list %}
-    <li>{{ story.pub_date|date }} - {{ story.title }}</li>
-{% empty %}
-    <li>No stories yet.</li>
-{% endfor %}
-</ul>
-
+<p>Hi {{ user.username }} !</p>
+<p>Email: {{ user.email }}</p>
+<p>Date joined: {{ user.date_joined }}</p>
+<p>Last login: {{ user.last_login }}</p>
 {% endblock content %}
+
