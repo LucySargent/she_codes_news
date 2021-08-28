@@ -30,7 +30,6 @@ class UserProfile(generic.DetailView):
 class StoryListView(ListView, LoginRequiredMixin, UserPassesTestMixin):
     template_name = 'users/userstories.html'
     model = NewsStory
-    context_object_name = 'userstory'
     
     # def get_queryset(self):
     #     context = super().get_queryset(self)
@@ -38,11 +37,9 @@ class StoryListView(ListView, LoginRequiredMixin, UserPassesTestMixin):
     #     return context
 
     def get_context_data(self, **kwargs):
-        print(self.request.GET.get('search'))
+        # print(self.request.GET.get('search'))
         context = super().get_context_data(**kwargs)
-        obj = self.get_object()
-        obj.author == self.request.user
-        context['user_stories'] = NewsStory.objects.order_by('-pub_date').filter(obj.author)
+        context['all_stories'] = NewsStory.objects.filter(author=self.request.user)
         return context
 
 

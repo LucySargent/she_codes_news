@@ -5,8 +5,8 @@
 
 <div>
     <ul>
-    {% if user_stories %}
-        {% for story in object_list %}
+    {% if all_stories %}
+        {% for story in all_stories %}
         <li>{{ story.pub_date|date }} - {{ story.title }} - {{ story.author }}</li>
         {% endfor %}
     {% else %}
