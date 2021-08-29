@@ -148,11 +148,3 @@
     border:white;
     /* margin-left: 10px; */
 }
-
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 200px;
-    border: black;
-    border-style: solid;
-}

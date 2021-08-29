@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@600&display=swap');
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"); */
 
 body {
     background-color: white;
@@ -21,6 +20,7 @@ body {
     height: 500px;
     width: 100%;
     margin-top: 100px;
+    color: white;
 }
 
 #hero_background {
@@ -38,16 +38,19 @@ body {
     /* background-color: #728597; */
     text-align: right;
     margin-top: 50px;
+    color: white;
 }
 
 #hero_child_title {
     /* background-color: #728597; */
     margin-top: 150px;
     text-align: center;
+    color: white;
 }
 #hero_child_subtitle {
     /* background-color: #728597; */
     text-align: center;
+    color: white;
 }
 
 #hero_search {
@@ -79,6 +82,7 @@ h1 {
     text-decoration: none;
     font-size: 4rem;
     margin: 0;
+    color: white;
 }
 
 h2 {
@@ -105,9 +109,8 @@ h3 {
 
 nav {
     flex-basis: 20%;
+    color: white;
 }
-
-.links 
 
 a {
     margin: 20px;
@@ -151,10 +154,10 @@ p {
     width: 50%;
     height: 250px;
     flex-direction: column;
-    background-color: #b6bfc7;
+    /* background-color: #b6bfc7; */
     text-align: center;
     margin-top: 10px;
-    margin-left: 150px;
+    /* margin-left: 150px; */
     border-radius: 5px;
     font-family: monospace;
     font-size: 15px;
@@ -190,4 +193,8 @@ p {
 #userh2 {
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 30px;
+}
+
+#CreateStory {
+    background-color: #b6bfc7;
 }
