@@ -140,11 +140,19 @@
 #search_button {
     font: 20px;
     font-family: monospace;
-    background-color: #fdcc43;
+    background-color: #954f90;
     color: white;
     font-weight: bolder;
     padding: 6px 10px 6px 10px;
     border-radius: 5px;  
     border:white;
     /* margin-left: 10px; */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px;
+    border: black;
+    border-style: solid;
 }

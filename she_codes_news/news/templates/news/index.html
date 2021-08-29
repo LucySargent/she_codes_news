@@ -8,19 +8,7 @@
     
     {% block content %}
     <div>
-        {% comment %} <img src="https://picsum.photos/600" id='hero_background' alt="Cupcakes"> 
-     
-{% comment %} <form action="">
-    <input type="text" name="search" placeholder="Search by title" value="{{request.GET.title}}">
-    <input type="submit" value="Search">
-</form> {% endcomment %}
-
-<form class="add_your_class" method="GET" action="" >
-    <button class="add_your_class" type="submit"> Search by author... </button>
-    <input class="add_your_class" type="search" name="search"> 
-</form>
-
-            <div class='hero_child'>
+            {% comment %} <div class='hero_child'>
                 <nav>
                     <a href="{% url 'news:index' %}">Home</a>
                     <a href="{% url 'users:createAccount' %}">Create Account</a>
@@ -31,13 +19,13 @@
                         <a href="{% url 'login' %}">Login</a>
                     {% endif %}
                 </nav>
-            </div>
+            </div> {% endcomment %}
 
-            <div class='hero_child'>
+            {% comment %} <div class='hero_child'>
                 <a href="{% url 'news:index' %}"><h1>She {Codes} News</h1></a>
                 <p>Find out about the She Codes Community</p>
             </div>
-    </div>
+    </div> {% endcomment %}
     
     <div id='user_login'>
         {% if user.is_authenticated %}
