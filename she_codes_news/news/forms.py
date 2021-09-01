@@ -9,21 +9,19 @@ class StoryForm(ModelForm):
         #list of fields to add to form - basically the fields from the NewStory model
         fields = ['title', 'pub_date', 'content']
         widgets = {'pub_date': forms.DateInput(format=('%m/%d/%Y'),
-        attrs={'class':'form-control', 'placeholder':'Selecta date','type':'date'
+        attrs={'class':'form-control', 'placeholder':'Selecta date','type':'date','style': 'margin-left: 12px;', 
         }),
 
         'title': forms.TextInput(attrs={
                 'class': "form-control",
-                'placeholder': 'Story title here...',
+                'placeholder': 'Story title here...', 
+                'style': 'margin-left: 47px;',
         }),
 
         'content': forms.Textarea(attrs={
                 'class': "form-control",
-                'placeholder': 'Story content here...'
+                'placeholder': 'Story content here...',
+                'style': 'margin-left: 20px;',
                 }),
         }
 
-
-        
-        # widgets = {'content': forms.TextInput(attrs={'style': 'border-color: purple;'}),}
-        # widgets = {'title': forms.TextInput(attrs={'style': 'margin-left: 30px;'}),}

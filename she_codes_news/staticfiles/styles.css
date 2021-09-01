@@ -176,15 +176,3 @@ p {
     font-family: 'Montserrat Subrayada', sans-serif;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 200px;
-    border: black;
-    border-style: solid;
-}
-
-#userh2 {
-    font-family: 'Montserrat Subrayada', sans-serif;
-    font-size: 30px;
-}

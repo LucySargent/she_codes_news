@@ -43,7 +43,7 @@ body {
 
 #hero_child_title {
     /* background-color: #728597; */
-    margin-top: 150px;
+    margin-top: 80px;
     text-align: center;
     color: white;
 }
@@ -53,8 +53,9 @@ body {
     color: white;
 }
 
-#hero_search {
-    float: right;
+#hero_child_search {
+    text-align: center;
+    margin-top: 30px;
 }
 
 #headline {
@@ -110,6 +111,7 @@ h3 {
 nav {
     flex-basis: 20%;
     color: white;
+    margin-right: 30px;
 }
 
 a {
@@ -122,7 +124,12 @@ a {
 
 p {
     font-family: monospace;
+    /* font-family: 'Montserrat Subrayada', sans-serif; */
     color: black;
+    font-size: 20px;
+}
+.p_tags {
+    font-family: monospace; 
 }
 
 #yellow_button {
@@ -134,7 +141,6 @@ p {
     padding: 6px 10px 6px 10px;
     border-radius: 5px;  
     border:white;
-    /* margin-left: 10px; */
 }
 
 #add_story_button {
@@ -146,48 +152,22 @@ p {
     border-radius: 5px;  
     border:white;
 }
+#search_button {
+    font: 20px;
+    font-family: monospace;
+    padding: 6px 10px;
+    border-radius: 5px;  
+    border:white;  
+    margin-top: 20px; 
+}
 
 #login {
     display: flex;
-    justify-content: center;
-    /* align-items: center; */
-    width: 50%;
-    height: 250px;
     flex-direction: column;
-    /* background-color: #b6bfc7; */
+    margin-top: 0px;
     text-align: center;
-    margin-top: 10px;
-    /* margin-left: 150px; */
-    border-radius: 5px;
     font-family: monospace;
     font-size: 15px;
-}
-
-.create_account {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    height: 400px;
-    flex-direction: column;
-    background-color: #b6bfc7;
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 150px;
-    border-radius: 5px;
-    font-family: monospace;
-    font-size: 15px;
-}
-
-.account_form {
-    font-family: 'Montserrat Subrayada', sans-serif;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 200px;
-    border: black;
-    border-style: solid;
 }
 
 #userh2 {
@@ -195,6 +175,31 @@ p {
     font-size: 30px;
 }
 
-#CreateStory {
-    background-color: #b6bfc7;
+.form-group {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    width: 500px;
+}
+
+label {
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+#create_story_input {
+    font: 20px;
+    font-family: monospace;
+    background-color: #954f90;
+    color: white;
+    font-weight: bolder;
+    padding: 6px 10px 6px 10px;
+    border-radius: 5px;  
+    border:white;
+}
+
+#latest-stories{ 
+    display: flex; 
+    height: 500px;
+    width: 90%;
+    margin-left: 45px;
+    border: 5px solid white; 
+    border: 5px;
 }

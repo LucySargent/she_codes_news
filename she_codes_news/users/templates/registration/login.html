@@ -2,19 +2,14 @@
 
 {% block content %}
 <div id='login'>
-    <div>
-        {% comment %} <h2>Login</h2> {% endcomment %}
-    </div>
-    <div>
-        <form id='form' method="post">
+    <div class="form-group">
+        <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-    </div>
     <div>
-    <button type="submit" id="yellow_button">Login</button>
+        <button type="submit" id="yellow_button">Login</button>
     </div>
-</form>
-
+        </form>
 </div>
 
 {% endblock content %}

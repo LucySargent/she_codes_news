@@ -9,7 +9,7 @@
     {% block content %}
     <div id='user_login'>
         {% if user.is_authenticated %}
-            <p>Welcome back {{ user.username }}! →<a href="{% url 'news:newStory' %}" id="add_story_button">Write a new story</a></p>
+            <p class='p_tags'>Welcome back {{ user.username }}! →<a href="{% url 'news:newStory' %}" id="add_story_button">Write a new story</a></p>
         {% else %}
             <a href="{% url 'login' %}" id="add_story_button">Login</a>
         {% endif %}
@@ -20,11 +20,9 @@
     </div>
 
     <div id="latest-stories">
-        {% comment %} <div class="story-card"> {% endcomment %}
             {% if latest_stories %}
                 {% for story in latest_stories %}
                     {% include "./storycard.html" with story=story position=forloop.counter%}
-                    {% comment %} <p>{{ story.title }}</p> {% endcomment %}
                 {% endfor %}
             {% else %}
                 <p>No stories are available.</p>

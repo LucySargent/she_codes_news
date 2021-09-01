@@ -1,18 +1,30 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %} 
+
 {% block content %}
-
 <h2>My Stories</h2>
-
-<div>
-    <ul>
+<div id="latest-stories">
     {% if all_stories %}
         {% for story in all_stories %}
-        <li>{{ story.pub_date|date }} - {{ story.title }} - {{ story.author }}</li>
+        {% include "news/storycard.html" with story=story position=forloop.counter%}
         {% endfor %}
     {% else %}
         <li>No stories yet.</li>
     {% endif %}
-    </ul>
 </div>
-
 {% endblock %}
+
+  {% comment %} <div id="latest-stories">
+        <div class="story-card">
+            {% if latest_stories %}
+                {% for story in latest_stories %}
+                    {% include "./storycard.html" with story=story position=forloop.counter%}
+                    <p>{{ story.title }}</p>
+                {% endfor %}
+            {% else %}
+                <p>No stories are available.</p>
+            {% endif %}
+    </div> {% endcomment %}

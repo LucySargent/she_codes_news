@@ -7,6 +7,19 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = CustomUser
         fields = ['username', 'email']
+        widgets = {
+
+        'username': forms.TextInput(attrs={
+                'class': "form-control",
+                'placeholder': 'Username',
+        }),
+
+        'email': forms.TextInput(attrs={
+                'class': "form-control",
+                'placeholder': 'Email'
+                }),        
+        }
+
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
