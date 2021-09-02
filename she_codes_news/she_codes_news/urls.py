@@ -18,7 +18,7 @@ from django.urls import include, path
 
 #project urls 
 urlpatterns = [
-    path('', include('news.urls')), # /news/ 
+    # path('', include('news.urls')), # /news/ 
     path('news/', include('news.urls')),
     path('admin/', admin.site.urls), #admin
     path('users/', include('users.urls')), #?create account
