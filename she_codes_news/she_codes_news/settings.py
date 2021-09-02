@@ -97,13 +97,19 @@ DATABASES = {
     'USER': 'xljfawrxvyjwte',
     'PASSWORD': '658504a8921fbeef391db815a29f3e70ca1ada983bff611572524009d46569a5',
     'HOST': 'ec2-184-73-198-174.compute-1.amazonaws.com', 
-    'PORT': '5432',  
+    'PORT': '5432' 
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # tell heroku in production to use our postgres database
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
