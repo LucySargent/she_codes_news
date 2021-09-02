@@ -43,7 +43,7 @@
         {% comment %} <div class="story-card"> {% endcomment %}
             {% if latest_stories %}
                 {% for story in latest_stories %}
-                    {% include "./storycard.html"  with story=story position=forloop.counter %}
+                    {% include "./storyCard.html"  with story=story position=forloop.counter %}
                     {% comment %} <p>{{ story.title }}</p> {% endcomment %}
                 {% endfor %}
             {% else %}
@@ -58,7 +58,7 @@
     <div id="all-stories">
         {% if latest_stories %}
             {% for story in all_stories %}
-                {% include "./storycard.html" with story=story %}
+                {% include "./storyCard.html" with story=story %}
                 {% comment %} <p>{{ story.title }}</p> {% endcomment %}
             {% endfor %}
         {% else %}
