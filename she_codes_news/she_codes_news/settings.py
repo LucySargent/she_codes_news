@@ -92,8 +92,12 @@ WSGI_APPLICATION = 'she_codes_news.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    'ENGINE':'django.db.backends.postgresql_psycopg2', 
+    'NAME': 'dep9sr48v7j5ca',
+    'USER': 'xljfawrxvyjwte',
+    'PASSWORD': '658504a8921fbeef391db815a29f3e70ca1ada983bff611572524009d46569a5',
+    'HOST': 'ec2-184-73-198-174.compute-1.amazonaws.com', 
+    'PORT': '5432',  
     }
 }
 
