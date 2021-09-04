@@ -89,17 +89,6 @@ WSGI_APPLICATION = 'she_codes_news.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-
-DATABASES = {
-    'default': {
-    'ENGINE':'django.db.backends.postgresql_psycopg2', 
-    'NAME': 'dep9sr48v7j5ca',
-    'USER': 'xljfawrxvyjwte',
-    'PASSWORD': '658504a8921fbeef391db815a29f3e70ca1ada983bff611572524009d46569a5',
-    'HOST': 'ec2-184-73-198-174.compute-1.amazonaws.com', 
-    'PORT': '5432' 
-    }
-}
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -107,7 +96,7 @@ DATABASES = {
 #     }
 # }
 
-# tell heroku in production to use our postgres database rather than SQLite
+# tell heroku in production to use our postgres database rather than SQLite database
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
