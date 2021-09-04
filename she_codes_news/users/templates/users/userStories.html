@@ -9,7 +9,7 @@
 <div id="latest-stories">
     {% if all_stories %}
         {% for story in all_stories %}
-        {% include "news/storycard.html" with story=story position=forloop.counter%}
+        {% include "news/storyCard.html" with story=story position=forloop.counter%}
         {% endfor %}
     {% else %}
         <li>No stories yet.</li>
