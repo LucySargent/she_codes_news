@@ -107,7 +107,7 @@ DATABASES = {
 #     }
 # }
 
-# tell heroku in production to use our postgres database
+# tell heroku in production to use our postgres database rather than SQLite
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
@@ -158,3 +158,4 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
