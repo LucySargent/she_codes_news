@@ -28,7 +28,7 @@ class UserProfile(generic.DetailView):
 
 
 class StoryListView(ListView, LoginRequiredMixin, UserPassesTestMixin):
-    template_name = 'users/userstories.html'
+    template_name = 'users/userStories.html'
     model = NewsStory
     
     # def get_queryset(self):
