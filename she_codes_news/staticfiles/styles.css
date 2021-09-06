@@ -157,10 +157,17 @@ p {
     font-family: monospace;
     padding: 6px 10px;
     border-radius: 5px;  
-    border:white;  
+    border: white;  
     margin-top: 20px; 
 }
-
+/* #test {
+    font: 20px;
+    font-family: monospace;
+    padding: 6px 10px;
+    border-radius: 5px;  
+    border:white;  
+    margin-top: 20px; 
+} */
 #login {
     display: flex;
     flex-direction: column;

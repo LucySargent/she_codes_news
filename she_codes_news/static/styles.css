@@ -42,13 +42,11 @@ body {
 }
 
 #hero_child_title {
-    /* background-color: #728597; */
-    margin-top: 80px;
+    margin-top: 60px;
     text-align: center;
     color: white;
 }
 #hero_child_subtitle {
-    /* background-color: #728597; */
     text-align: center;
     color: white;
 }
@@ -152,36 +150,55 @@ p {
     border-radius: 5px;  
     border:white;
 }
-#search_button {
-    font: 20px;
+#search_input {
+    font-size: 15px;
     font-family: monospace;
     padding: 6px 10px;
     border-radius: 5px;  
-    border:white;  
+    border: white;  
     margin-top: 20px; 
+    background-color: white;  
+    width: 225px;
 }
-
-#login {
+.form_container {
     display: flex;
-    flex-direction: column;
-    margin-top: 0px;
-    text-align: center;
-    font-family: monospace;
+    flex-direction: row;
+    text-align:center;
+    justify-content: center;
+    margin-top: 20px;
+    font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 15px;
+    /* width: 750px; */
+    /* border-style: solid; */
 }
-
+#form_cont_image {
+    /* border: purple; */
+    /* border-style: solid; */
+    width: 180px;
+}
+#form_cont_form {
+    margin-top: 20px;
+    /* border: purple; */
+    /* border-style: solid; */
+    width: 300px;
+    text-align: justify;
+}
+#form_cont_login {
+    margin-top: 60px;
+    /* border: purple; */
+    /* border-style: solid; */
+    width: 100px;
+    text-align: justify;
+}
 #userh2 {
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 30px;
 }
 
-.form-group {
-    font-family: 'Montserrat Subrayada', sans-serif;
-    width: 500px;
-}
 
 label {
     font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 15px;
 }
 
 #create_story_input {

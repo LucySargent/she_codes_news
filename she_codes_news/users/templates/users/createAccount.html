@@ -2,7 +2,7 @@
 
 {% block content %}
 <h2>Create Account</h2>
-<div class="form-group">
+<div class="form_container">
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
