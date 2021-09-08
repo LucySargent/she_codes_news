@@ -15,13 +15,14 @@ class StoryForm(ModelForm):
         'title': forms.TextInput(attrs={
                 'class': "form-control",
                 'placeholder': 'Story title here...', 
-                'style': 'margin-left: 47px;',
+                'style': 'width: 100%',
         }),
 
         'content': forms.Textarea(attrs={
                 'class': "form-control",
                 'placeholder': 'Story content here...',
                 'style': 'margin-left: 20px;',
+                'style': 'width: 100%',
                 }),
         }
 

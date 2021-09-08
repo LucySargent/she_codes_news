@@ -1,12 +1,16 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+{% endblock %}
 
 {% block content %}
-<h2>Create Account</h2>
-<div class="form_container">
+<div class="account_container">
+<h2 id='account_title'>Sign Up</h2>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" id="yellow_button">Create Account</button>
+    <button type="submit" class="add_story_button">Sign Up</button>
 </form>
 </div>
 {% endblock %}

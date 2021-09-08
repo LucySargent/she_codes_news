@@ -86,14 +86,12 @@ h1 {
 
 h2 {
    font-family: 'Montserrat Subrayada', sans-serif; 
-   /* font-family: 'Poppins', sans-serif; */
 }
 
 h3 {
     font-size: 2rem;
     margin: 0;
 }
-
 #header-text {
     color: white;
     font-family: 'Montserrat Subrayada', sans-serif;
@@ -122,27 +120,17 @@ a {
 
 p {
     font-family: monospace;
-    /* font-family: 'Montserrat Subrayada', sans-serif; */
+    /* font-family: 'Montserrat Subrayada', sans-serif;  */
     color: black;
     font-size: 20px;
 }
-.p_tags {
-    font-family: monospace; 
+.p_profile {
+   font-family: 'Montserrat Subrayada', sans-serif; 
 }
 
-#yellow_button {
-    font: 40px;
-    font-family: monospace;
-    background-color: #954f90;
-    color: white;
-    font-weight: bolder;
-    padding: 6px 10px 6px 10px;
-    border-radius: 5px;  
-    border:white;
-}
 
-#add_story_button {
-    font: 40px;
+.add_story_button {
+    font-size: 20px;
     font-family: monospace;
     background-color: #954f90;
     color: white;
@@ -168,34 +156,74 @@ p {
     margin-top: 20px;
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 15px;
-    /* width: 750px; */
-    /* border-style: solid; */
 }
 #form_cont_image {
-    /* border: purple; */
-    /* border-style: solid; */
     width: 180px;
 }
 #form_cont_form {
     margin-top: 20px;
-    /* border: purple; */
-    /* border-style: solid; */
     width: 300px;
     text-align: justify;
 }
 #form_cont_login {
     margin-top: 60px;
-    /* border: purple; */
-    /* border-style: solid; */
     width: 100px;
-    text-align: justify;
+    text-align: right;
 }
+
+.account_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    width: 40%;
+    margin: auto;
+    font-size: 20px;
+}
+.account_container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+} 
+
+#id_password {
+    width: 100%;
+}
+#id_password1 {
+    width: 100%;
+}
+#id_password2 {
+    width: 100%;
+}
+#id_username {
+    width: 100%;
+}
+
+#id_pub_date.form-control {
+    width: 79%;
+}
+ul {
+    text-align: justify;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 15px;
+}
+.helptext {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 15px;
+}
+#account_title {
+    text-align: center;
+    margin-top: 10%;
+}
+
+
 #userh2 {
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 30px;
 }
-
-
 label {
     font-family: 'Montserrat Subrayada', sans-serif;
     font-size: 15px;

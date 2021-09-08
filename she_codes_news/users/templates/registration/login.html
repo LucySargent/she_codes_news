@@ -5,20 +5,20 @@
 {% endblock %}
 
 {% block content %}
-<div class='form_container'>
-    <div id='form_cont_image'>
-        <img src="{% static '\news\images\shecodes_logo.png'%}" alt="logo"  width="150" height="150" >
-    </div>
-    <div id='form_cont_form'>
+<div class='account_container form'>
+    {% comment %} <div id='form_cont_image'> {% endcomment %}
+        {% comment %} <img src="{% static '\news\images\shecodes_logo.png'%}" alt="logo"  width="150" height="150" > {% endcomment %}
+    {% comment %} </div> {% endcomment %}
+    {% comment %} <div id='form_cont_form'> {% endcomment %}
         <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-    </div>
-    <div id='form_cont_login'>
-        <button type="submit" id="yellow_button">Login</button>
-    </div>
+    {% comment %} </div> {% endcomment %}
+    {% comment %} <div id='form_cont_login'> {% endcomment %}
+        <button type="submit" class="add_story_button">Login</button>
+    {% comment %} </div> {% endcomment %}
         </form>
-    </div>
+    {% comment %} </div> {% endcomment %}
 </div>
 
 {% endblock content %}

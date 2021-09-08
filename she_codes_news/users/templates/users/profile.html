@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-<p>Hi {{ user.username }} !</p>
-<p>Email: {{ user.email }}</p>
-<p>Date joined: {{ user.date_joined }}</p>
-<p>Last login: {{ user.last_login }}</p>
+<p class='p_profile'>Hi {{ user.username }} !</p>
+<p class='p_profile'>Email: {{ user.email }}</p>
+<p class='p_profile'>Date joined: {{ user.date_joined }}</p>
+<p class='p_profile'>Last login: {{ user.last_login }}</p>
 
 <a href="users/userstories/">My stories</a>
 {% endblock content %}

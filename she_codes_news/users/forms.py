@@ -12,11 +12,13 @@ class CustomUserCreationForm(UserCreationForm):
         'username': forms.TextInput(attrs={
                 'class': "form-control",
                 'placeholder': 'Username',
+                'style': 'width: 100%',
         }),
 
         'email': forms.TextInput(attrs={
                 'class': "form-control",
-                'placeholder': 'Email'
+                'placeholder': 'Email',
+                'style': 'width: 100%',
                 }),        
         }
 

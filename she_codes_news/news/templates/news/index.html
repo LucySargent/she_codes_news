@@ -29,9 +29,9 @@
     
     <div id='user_login'>
         {% if user.is_authenticated %}
-            <p>Welcome back, {{ user.username }}! →<a href="{% url 'news:newStory' %}" id="add_story_button">Write a new story</a></p>
+            <p>Welcome back, {{ user.username }}! →<a href="{% url 'news:newStory' %}" class='add_story_button'>Write a new story</a></p>
         {% else %}
-            <a href="{% url 'login' %}" id="add_story_button">Login</a></p>
+            <a href="{% url 'login' %}" class='add_story_button'>Login</a></p>
         {% endif %}
     </div>
     

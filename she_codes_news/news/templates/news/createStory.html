@@ -1,11 +1,15 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+{% endblock %}
 
 {% block content %}
-<div id='new_story_container'>
+<div class='account_container'>
 <form action="" method="post">
     {% csrf_token %} 
     {{ form.as_p }}
-    <input type="submit" value="submit">
+    <input class='add_story_button' type="submit" value="submit">
 </form>
 </div>
 
